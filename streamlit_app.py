@@ -1,6 +1,10 @@
 # import streamlit and pandas libraries
 import streamlit
 import pandas
+import requests
+
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
 
 # build page of title, headers and text
 streamlit.title("My Mom's New Healthy Diner")
