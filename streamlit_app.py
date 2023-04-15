@@ -14,6 +14,5 @@ df.index=['Match' + str(x) for x in range(1, 11)]
 # build page of title, headers and text
 st.title("FOF Summer Tournament")
 
-
 # write your own comment - what does this do?
 st.dataframe(df)
