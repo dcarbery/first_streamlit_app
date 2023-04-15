@@ -2,9 +2,11 @@
 import streamlit as st
 import pandas as pd
 
-"1tADOzIdSGwTCUXE0Uz3uNIRVrMqFk47nhwJLNGVr4Pg"
 
-url = f"https://docs.google.com/spreadsheets/d/{"1tADOzIdSGwTCUXE0Uz3uNIRVrMqFk47nhwJLNGVr4Pg"}/gviz/tq?tqx=out:csv&sheet={"results"}"
+# Connect to the Google Sheet
+sheet_id = "1tADOzIdSGwTCUXE0Uz3uNIRVrMqFk47nhwJLNGVr4Pg"
+sheet_name = "results"
+url = f"<https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}>"
 df = pd.read_csv(url)
 
 # build page of title, headers and text
