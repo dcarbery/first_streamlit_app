@@ -2,8 +2,11 @@
 import streamlit as st
 import pandas as pd
 
-sheet_url = "https://docs.google.com/spreadsheets/d/1tADOzIdSGwTCUXE0Uz3uNIRVrMqFk47nhwJLNGVr4Pg/edit?usp=sharing"
-df = pd.DataFrame(sheet_url)
+"1tADOzIdSGwTCUXE0Uz3uNIRVrMqFk47nhwJLNGVr4Pg"
+
+url = f"https://docs.google.com/spreadsheets/d/{"1tADOzIdSGwTCUXE0Uz3uNIRVrMqFk47nhwJLNGVr4Pg"}/gviz/tq?tqx=out:csv&sheet={"results"}"
+df = pd.read_csv(url)
+
 # build page of title, headers and text
 st.title("FOF Summer Tournament")
 
