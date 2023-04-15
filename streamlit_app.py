@@ -17,5 +17,7 @@ for age in df.Age.unique():
   for group in df.Group.unique():
     df2=df.loc[ (df['Age'] == age) & (df['Group'] == group),    ]
     df2.index=['Match' + str(x) for x in range(1, 11)]
+    
+    st.header(age + ' ' + ' ' + df2['Pitch'][0])
     # write your own comment - what does this do?
-    st.dataframe(df2)
+    st.dataframe(df2.loc[:, 'Time':])
