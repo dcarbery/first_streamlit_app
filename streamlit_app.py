@@ -16,7 +16,7 @@ st.title("FOF Summer Tournament")
 for age in df.Age.unique():
   for group in df.Group.unique():
     df2=df.loc[ (df['Age'] == age) & (df['Group'] == group),    ]
-    df2.index=['Match' + str(x) for x in range(1, 11)]
+    df2.index=['Match ' + str(x) for x in range(1, 11)]
     
     st.subheader(age + ' Group ' + group + ' (Pitch ' + df2.iloc[0, 2].astype(str) + ')')
     # write your own comment - what does this do?
