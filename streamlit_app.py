@@ -18,4 +18,4 @@ for age in df.Age.unique():
     df2=df.loc[ (df['Age'] == age) & (df['Group'] == group),    ]
     df2.index=['Match' + str(x) for x in range(1, 11)]
     # write your own comment - what does this do?
-    st.dataframe(df)
+    st.dataframe(df2)
