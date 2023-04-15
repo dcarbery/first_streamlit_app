@@ -3,7 +3,7 @@ import streamlit
 import pandas
 
 # build page of title, headers and text
-streamlit.title("My Mom's New Healthy Diner")
+streamlit.title("FOF Summer Tournament")
 
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
