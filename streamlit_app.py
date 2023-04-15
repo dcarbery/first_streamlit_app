@@ -9,6 +9,7 @@ sheet_name = "results"
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 #df = pd.read_csv(url, dtype=str)
 df = pd.read_csv(url)
+df.index=['Match' + str(x) for x in range(1, 11)]
 
 # build page of title, headers and text
 st.title("FOF Summer Tournament")
