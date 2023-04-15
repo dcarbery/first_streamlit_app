@@ -18,6 +18,8 @@ for age in df.Age.unique():
     df2=df.loc[ (df['Age'] == age) & (df['Group'] == group),    ]
     df2.index=['Match' + str(x) for x in range(1, 11)]
     
-    st.header(age + ' Group ' + group + ' (Pitch ' + df2.iloc[0, 2].astype(str) + ')')
+    st.subheader(age + ' Group ' + group + ' (Pitch ' + df2.iloc[0, 2].astype(str) + ')')
     # write your own comment - what does this do?
     st.dataframe(df2.loc[:, 'Time':])
+    
+    st.divider()
