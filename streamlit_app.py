@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response.json())
+
 
 
 my_fruit_list = pd.read_csv(r"https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
@@ -25,3 +25,4 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 st.dataframe(fruits_to_show)
 
 streamlit.header("Fruityvice Fruit Advice!")
+st.text(fruityvice_response.json())
